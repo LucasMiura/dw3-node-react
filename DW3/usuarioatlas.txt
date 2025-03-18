@@ -1,0 +1,9 @@
+Username
+lucasnmiura
+
+Password
+tFwuvNTa8BnaWUAB
+
+mongodb+srv://atlas-sample-dataset-load-67d9f6d812718e6fb270c6c0:<db_password>@cluster0.o5zhy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+mongodb://atlas-sample-dataset-load-67d9f6d812718e6fb270c6c0:<db_password>@cluster0-shard-00-00.o5zhy.mongodb.net:27017,cluster0-shard-00-01.o5zhy.mongodb.net:27017,cluster0-shard-00-02.o5zhy.mongodb.net:27017/?replicaSet=atlas-139q9m-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
