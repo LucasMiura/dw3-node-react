@@ -46,4 +46,4 @@ const loginUser = async (req, res) => {
     res.sendStatus(500);
   }
 };
-export default { createUser, loginUser };
+export default { createUser, loginUser, JWTSecret };
