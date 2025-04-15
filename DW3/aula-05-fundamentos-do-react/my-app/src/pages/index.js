@@ -2,7 +2,9 @@ import Counter from "@/components/Counter";
 import CounterTwo from "@/components/CounterTwo";
 import Descriptions from "@/components/Descriptions";
 import Dog from "@/components/Dog";
+import Form from "@/components/Form";
 import Parent from "@/components/Parent";
+import TrafficLight from "@/components/TrafficLight";
 import User from "@/components/User";
 import Welcome from "@/components/Welcome";
 import Head from "next/head";
@@ -33,6 +35,12 @@ export default function Home() {
         <Counter />
         <br />
         <CounterTwo />
+        <br /><br />
+        {/* Semáforo (estados) */}
+        <TrafficLight />
+        <br /><br />
+        {/* Formulário */}
+        <Form />
       </main>
     </>
   );

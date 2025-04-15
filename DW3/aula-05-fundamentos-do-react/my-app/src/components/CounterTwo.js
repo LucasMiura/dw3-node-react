@@ -9,10 +9,8 @@ const [count, setCount] = useState(0)
     <>
       <div>
         <p>Contador: {count}</p>
-        <button onClick={() => setCount(count + 1)}>Aumentar</button>
-        <br />
-        <button onClick={() => setCount(count - 1)}>Diminuir</button>
-        <br />
+        <button onClick={() => setCount(count + 1)}>Aumentar</button>&nbsp;
+        <button onClick={() => setCount(count - 1)}>Diminuir</button>&nbsp;
         <button onClick={() => setCount(0)}>Zerar</button>
       </div>
     </>
