@@ -4,6 +4,7 @@ import Descriptions from "@/components/Descriptions";
 import Dog from "@/components/Dog";
 import Form from "@/components/Form";
 import Parent from "@/components/Parent";
+import TaskList from "@/components/TaskList";
 import TrafficLight from "@/components/TrafficLight";
 import User from "@/components/User";
 import Welcome from "@/components/Welcome";
@@ -35,12 +36,41 @@ export default function Home() {
         <Counter />
         <br />
         <CounterTwo />
-        <br /><br />
+        <br />
+        <br />
         {/* Semáforo (estados) */}
         <TrafficLight />
-        <br /><br />
+        <br />
+        <br />
         {/* Formulário */}
         <Form />
+        <br />
+        <br />
+        {/* Passando a lista de tarefas por PROPS */}
+        <TaskList
+          tasks={[
+            {
+              id: 1,
+              text: "Estudar Reackt",
+            },
+            {
+              id: 2,
+              text: "Pagar os boletos",
+            },
+            {
+              id: 3,
+              text: "Tirar o lixo",
+            },
+            {
+              id: 4,
+              text: "Lavar roupa",
+            },
+          ]}
+        />
+        <br />
+        <br />
+        <br />
+        <br />
       </main>
     </>
   );
