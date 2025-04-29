@@ -27,6 +27,21 @@ const HomeContent = () => {
     fetchGames();
   }, []); // Dependência do useEffects
 
+  // Função para deletar
+  const deleteGame = async (gameId) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:4000/games/${gameId}`
+      );
+      if (response.status === 204) {
+        alert("Jogo excluído com sucesso!");
+        setGames(games.filter((game) => game._id !== gameId));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className={styles.homeContent}>
@@ -47,16 +62,32 @@ const HomeContent = () => {
                 </div>
                 <div className={styles.gameInfo}>
                   <h3>{game.title}</h3>
-                  {/* <li>Plataforma: {game.descriptions.platform}</li>
-                  <li>Gênero: {game.descriptions.genre}</li> */}
+                  <li>Plataforma: {game.descriptions.platform}</li>
+                  <li>Gênero: {game.descriptions.genre}</li>
+                  <li>Classificação: {game.descriptions.rating}</li>
                   <li>Ano: {game.year}</li>
                   <li>
-                    Preço:{" "}
+                    Preço:
                     {game.price.toLocaleString("pt-br", {
                       style: "currency",
                       currency: "BRL",
                     })}
                   </li>
+                  {/* Botão para excluir */}
+                  <button
+                    className={styles.btnDel}
+                    onClick={() => {
+                      const confirmed = window.confirm(
+                        "Deseja mesmo excluir o jogo?"
+                      );
+                      if (confirmed) {
+                        // Função para deletar
+                        deleteGame(game._id);
+                      }
+                    }}
+                  >
+                    Deletar
+                  </button>
                 </div>
               </ul>
             ))}
